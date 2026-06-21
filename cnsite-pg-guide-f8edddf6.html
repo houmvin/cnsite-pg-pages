@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pg游戏 · 专题介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f8f6;
+      color: #2c2b2a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 1rem;
+      min-height: 100vh;
+    }
+
+    .page-wrapper {
+      max-width: 740px;
+      width: 100%;
+    }
+
+    /* ----- hero 横幅 ----- */
+    .hero {
+      margin: 2rem 0 3rem 0;
+      border-bottom: 2px solid #e1ddd6;
+      padding-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #1f1e1b;
+      margin-bottom: 0.9rem;
+      line-height: 1.25;
+    }
+
+    .hero .subhead {
+      font-size: 1.1rem;
+      color: #5d5954;
+      max-width: 580px;
+      border-left: 3px solid #b7a99a;
+      padding-left: 1.2rem;
+      font-weight: 380;
+    }
+
+    /* ----- 正文区域 ----- */
+    .content-section {
+      margin: 2.8rem 0;
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+      font-weight: 480;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      color: #2f2b27;
+      border-bottom: 1px solid #e4dfd7;
+      padding-bottom: 0.5rem;
+    }
+
+    .content-section h3 {
+      font-size: 1.2rem;
+      font-weight: 430;
+      margin-top: 1.8rem;
+      margin-bottom: 0.6rem;
+      color: #3b3732;
+    }
+
+    .content-section p {
+      margin-bottom: 1.3rem;
+      font-size: 1rem;
+      color: #3b3834;
+    }
+
+    .content-section p a {
+      color: #5f4c3b;
+      text-decoration: none;
+      border-bottom: 1px dotted #a09386;
+      transition: border-color 0.2s ease;
+    }
+
+    .content-section p a:hover {
+      border-bottom: 1px solid #3f3228;
+    }
+
+    /* 引用 / 侧记 */
+    .inline-note {
+      background: #f2efe9;
+      padding: 1.2rem 1.6rem;
+      margin: 2rem 0 1.8rem 0;
+      border-radius: 4px;
+      font-style: normal;
+      color: #3c3834;
+      border-left: 4px solid #c7b9a8;
+    }
+
+    .inline-note strong {
+      font-weight: 540;
+    }
+
+    /* 小列表（融入段落风格） */
+    .mini-list {
+      margin: 0.5rem 0 1.5rem 0;
+      padding-left: 1.4rem;
+      list-style: none;
+    }
+
+    .mini-list li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .mini-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #9b8d7e;
+    }
+
+    /* 页尾区域 */
+    .page-footer {
+      margin: 4rem 0 2.5rem 0;
+      border-top: 1px solid #ddd9d1;
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.9rem;
+      color: #6b655c;
+    }
+
+    .footer-link {
+      margin-top: 0.4rem;
+    }
+
+    .footer-link a {
+      color: #5b4b3d;
+      text-decoration: none;
+      border-bottom: 1px dotted #b3a499;
+      font-weight: 400;
+    }
+
+    .footer-link a:hover {
+      border-bottom: 1px solid #3f3228;
+    }
+
+    .small-meta {
+      font-size: 0.8rem;
+      color: #8f857a;
+      letter-spacing: 0.02em;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      body {
+        padding: 0.8rem;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .hero .subhead {
+        font-size: 0.95rem;
+        padding-left: 0.9rem;
+      }
+
+      .content-section h2 {
+        font-size: 1.3rem;
+      }
+
+      .content-section p {
+        font-size: 0.95rem;
+      }
+
+      .page-footer {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- 首页横幅 -->
+    <header class="hero">
+      <h1>pg游戏 · 日常对照与延伸</h1>
+      <div class="subhead">
+        一份偏向知识查找与专题阅读的杂志式索引，适合在闲暇时反复检索。
+      </div>
+    </header>
+
+    <!-- 三段自然介绍 + 穿插承接 -->
+    <section class="content-section">
+      <h2>从日常查询说起</h2>
+      <p>
+        很多时候我们打开一个游戏介绍页面，并不是为了立刻体验，而是想快速定位某类玩法、某项机制，或者与手头的资料做横向比对。<a href="https://cnsite--pg.com">pg游戏</a> 
+        的框架恰好适合这种「轻查询」的使用习惯：页面结构清晰，分类以内容为导向，不必被繁复的促销信息干扰。实际使用时，可以先在目录中定位自己关心的主题，再逐条阅读对应的说明，效率比无目的浏览高出许多。
+      </p>
+      <p>
+        除了直接查阅，也有不少人把这类页面当作自己的「游戏笔记库」。遇到感兴趣的设计或数值设定，随手摘录下来，慢慢积累成一份私人对照表——这种延伸阅读的方式，反而比按顺序通读更能留下深刻印象。
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>对照中的发现</h2>
+      <p>
+        当我们把不同模块放在一起比较时，差异点往往会浮现出来。比如同一类型游戏在主界面布局上的取舍、新手引导的篇幅差异，或是奖励循环的节奏设计。这些细节在单独阅读时容易被忽略，但一旦并列对照，就能看出设计者思路的微妙偏向。
+      </p>
+      <p>
+        过去两个月我陆续整理了一份小清单，专门记录从<a href="https://cnsite--pg.com">pg游戏</a>页面中读到的值得留意的特征：
+      </p>
+      <ul class="mini-list">
+        <li>信息层级如何影响第一眼的注意力分配</li>
+        <li>帮助文本的篇幅与可读性之间的平衡</li>
+        <li>不同分类标签的命名习惯与复用度</li>
+      </ul>
+      <p>
+        每条记录都不长，但累积起来，对理解页面背后的信息组织逻辑很有帮助。如果你也习惯用「对照法」浏览，可能会发现更多自己原先没留意的线索。
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>延伸阅读的边界</h2>
+      <p>
+        从一份介绍出发，走向更宽的资料网络，是很多玩家和信息爱好者的自然路径。对我而言，搜索和翻阅<a href="https://cnsite--pg.com">pg游戏</a>的页面，往往不是终点，而是一个中途站点。顺着页面中提到的术语、模式或版本说明，可以再找到开发者访谈、社区讨论或更新日志——这些补充材料让最初的那份介绍显得更立体。
+      </p>
+      <div class="inline-note">
+        <strong>一点建议：</strong> 读介绍页时，不妨手边放一个笔记工具或浏览器标签组。遇到感兴趣的关键词，随手搜一下延伸文章，几分钟后回来继续读原文。这种穿插式阅读让信息留存率明显提高，也比一口气读完更有节奏感。
+      </div>
+      <p>
+        当然，延伸也要有边界。给自己设定一个「每轮最多延伸三层」的习惯，避免在超链接里越走越远，反而忘了最初想查什么。这也是为什么我一直觉得，好的介绍页应该像一本杂志的文章开篇：它给你足够多的线索，但从不强迫你一次性读完所有内容。
+      </p>
+    </section>
+
+    <!-- 页尾访问提示（自然嵌入） -->
+    <footer class="page-footer">
+      <div class="footer-link">
+        日常检索与延伸阅读的起点：<a href="https://cnsite--pg.com">pg游戏</a>
+      </div>
+      <div class="small-meta">
+        · 杂志式索引 · 对照笔记
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
